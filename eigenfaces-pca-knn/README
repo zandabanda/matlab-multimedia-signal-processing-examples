@@ -1,0 +1,14 @@
+Go to the main script 'run.m', and execute each section in succession.  
+
+This main script calls the helper functions 'getIMdata.m', 'PCA.m', 'PCA_rand.m', and 'knn_im.m'
+
+The sections are broken up according to each step in the algorithm (reading in data and preprocessing, computing PCA, performing knn)
+
+The final subsections will print out the accuracies of 5nn and 1nn.
+
+**NOTE**
+the function 'getIMdata.m' establishes a structure for the current directory using the funciton 'dir'.
+I use the field 'bytes' to sift through all the files in the directory to find images between 2900 and 3200 bytes.
+If any other files are added to the directory other than what is provided, and they are between 2900 and 3200 bytes, the function will NOT read in the image files.
+Please leave the directory as is, and don't change the files in such a way as to change their byte count.
+***

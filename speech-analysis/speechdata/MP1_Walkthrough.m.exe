@@ -1,0 +1,37 @@
+
+% Change directory to the location where the data files are kept
+cd speechdata
+
+%Define the length of the vector with which we are going to work.
+T=10000;
+
+% Load the audio file
+[A1a_org, Fs, Nb]= wavread('A1a.wav');
+[B1a_org, Fs, Nb]= wavread('B1a.wav');
+[C1a_org, Fs, Nb]= wavread('C1a.wav');
+
+A1a = imresize(A1a_org(:,1),[T ,1]);
+B1a = imresize(B1a_org(:,1),[T ,1]);
+C1a = imresize(C1a_org(:,1),[T ,1]);
+
+% Check if everything is okay.
+plot(A1a);
+
+% Close the figure
+close all
+
+%%%% Actually A1a is the raw features that we have talked about.
+
+
+%%%%Now lets look at the computation of cepstral coefficients
+help rceps
+
+%%%% real(ifft(log(abs(fft(x)))))
+
+W =100;
+ACeps = rceps(A1a(1:W));
+BCeps = rceps(B1a(1:W));
+CCeps = rceps(C1a(1:W));
+
+Dist_AB =sum((ACeps-BCeps).^2);
+Dist_AC =sum((ACeps-CCeps).^2);

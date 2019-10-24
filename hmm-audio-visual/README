@@ -1,0 +1,8 @@
+Go to the main script ‘main.m’, and locate the function call to ’run.m’ 
+Give the paths to the directory in the format shown.  The paths should be given as strings, hence my examples are shown with single quotes wrapping the paths.
+
+After properly specifying the paths, execute that cell and it should perform the whole classification process, printing out only the accuracies at the end.
+
+If for whatever reason ‘run.m’ doesn’t work and there is no easy fix, you can copy the data directory into the project directory and execute each cell of ‘main.m’ in succession.
+
+*** NOTE *** It takes a while to run each training/testing section for audio, video, audio_visual, as expected.  If you only want individual accuracies, comment out the function call to ‘test_HMM2’ for whichever modality.  Also, when running ‘test_HMM2’ on the audio data, MATLAB will give warnings that the data is ill-conditioned.  Ignore, it still works, and I can’t figure out how why its doing that, since I’m always passing more than one data frame to ‘ghmmlearn’.

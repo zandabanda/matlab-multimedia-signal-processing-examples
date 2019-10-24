@@ -1,0 +1,20 @@
+1) 
+
+Please open this project in MATLAB.
+
+
+2) 
+
+You can go to the GUI function and run the program yourself, after you put all the data in the provided directory.
+
+Or, please provide a path to the folder that contains “databaseInfo.mat” and the folder “IMAGES”.  Then go to repo and run the script, which calls run.m.  
+
+*NOTE* Remember to close the GUI after every query session.
+
+
+3) 
+
+The Report is given in pdf and worddoc forms.  The precision is given a png file, and can also be printed in MATLAB with the “plot_precision.m” function.
+
+
+
